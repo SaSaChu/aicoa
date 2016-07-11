@@ -164,73 +164,104 @@ html {
 
           // 小頁籤display要打開
           .top {
-            display: none;
+            $h: 40px;
+            display: inline-block;
+            width: 100%;
+            height: $h;
             font-size: .9em;
             font-weight: bolder;
             border-top: 3px solid rgba(100, 21, 27, 1.00);
             border-bottom: 1px solid rgba(191, 191, 191, 1.00);
+            position: relative;
+            margin-bottom: 10px;
+            position: relative;
 
-            @include clearfix();
+            &:before {
+              @include icomoon-font('icomoon') {
+                content: "\e901";
+                position: absolute;
+                top: 10px;
+                right: 5px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+              }
+            }
 
+
+            &.show {
+              height: auto;
+              &:before {
+                @include icomoon-font('icomoon') {
+                  content: "\e900";
+                }
+              }
+              > div {
+                position: relative;
+                @include opacity(1);
+                z-index: 1;
+                + div {
+                  border-top: 1px solid rgba(191, 191, 191, 1.00);
+                }
+                span {
+                  cursor: pointer;
+                }
+
+                &.sp {
+                  height: auto;
+                  z-index: 2;
+                  span {
+                    // background-color: rgba(0, 0, 255, 0.2);
+                  }
+                  div {
+                    
+                    display: inline-block;
+                    width: 100%;
+                    // border: 1px solid rgba(255, 0, 0, .3);
+
+                    a {
+                      display: inline-block;
+                      width: 100%;
+                      padding: 10px;
+                      color: rgba(126, 142, 153, 1.00);
+                      border-top: 1px solid rgba(191, 191, 191, .500);
+                      text-align: left;
+                      text-decoration: none;
+
+                      &:hover {
+                        color: rgba(40, 164, 160, 1.00);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            
             > div {
-              float: left;
-              width: calc(100% / 6);
-              position: relative;
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: inline-block;
+              width: 100%;
+              height: $h - 3px - 1px;
+              z-index: 1;
+              @include opacity(0);
 
-              border-right: 1px solid rgba(191, 191, 191, 1.00);
-
-              &:last-child {
-                border: 0;
+              &.sp {
+                z-index: 2;
+                @include opacity(1);
               }
 
               span {
                 display: inline-block;
                 width: 100%;
-                color: rgba(98, 96, 96, 1.00);
-                padding: 14px 0;
-
-                &.sp {
-                  color: white;
-                  background-color: rgba(149, 42, 51, 1.00);
-                }
+                height: 100%;
+                text-align: left;
+                padding-left: 5px;
+                line-height: $h - 3px - 1px - 2px;
               }
-
               .list {
                 display: none;
-              }
-
-              &:hover {
-                span {
-                  color: white;
-                  background-color: rgba(157, 49, 60, 1.00);
-                }
-
-                .list {
-                  display: inline-block;
-                  width: 100%;
-
-                  z-index: 22;
-
-                  position: absolute;
-                  left: 0;
-                  top:45px;
-
-                  > a {
-                    display: inline-block;
-                    width: 100%;
-                    padding: 15px 0;
-
-                    color: rgba(126, 142, 153, 1.00);
-                    background-color: rgba(234, 238, 242, 1.00);
-                    text-decoration: none;
-
-                    border-top: 2px solid white;
-
-                    &:hover {
-                      color: rgba(40, 164, 160, 1.00);
-                    }
-                  }
-                }
               }
             }
           }
@@ -791,21 +822,25 @@ html {
               position: relative;
 
               border-right: 1px solid rgba(191, 191, 191, 1.00);
-
+              &.index {
+                display: none;
+              }
               &:last-child {
                 border: 0;
               }
 
+              &.sp {
+                span {
+                  color: white;
+                  background-color: rgba(149, 42, 51, 1.00);
+                }
+              }
               span {
                 display: inline-block;
                 width: 100%;
                 color: rgba(98, 96, 96, 1.00);
                 padding: 14px 0;
 
-                &.sp {
-                  color: white;
-                  background-color: rgba(149, 42, 51, 1.00);
-                }
               }
 
               .list {

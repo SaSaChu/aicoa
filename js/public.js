@@ -10,6 +10,11 @@
 
 $(function () {
 
- $('.adpic, .p01, .x01').imgLiquid ({verticalAlign: 'center'});
-
+  $('.adpic, .p01, .x01').imgLiquid ({verticalAlign: 'center'});
+  
+  $('#menu > div').click (function () {
+    if (!$('#menu').hasClass ('show')) return $('#menu').addClass ('show');
+    if ($(this).hasClass ('sp')) return $('#menu').removeClass ('show');
+     $(this).addClass ('sp').siblings ().removeClass ('sp');
+  });
 });
