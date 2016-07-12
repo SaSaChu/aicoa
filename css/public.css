@@ -45,11 +45,11 @@
  */
 @font-face {
   font-family: "Monaco";
-  src: url('/aicoa/font/monaco/monaco.ttf?1457875218') format('truetype'), url('/aicoa/font/monaco/monaco.otf?1457875218') format('opentype');
+  src: url('/aicoa/font/monaco/monaco.ttf?1468247080') format('truetype'), url('/aicoa/font/monaco/monaco.otf?1468247080') format('opentype');
 }
 @font-face {
   font-family: "icomoon";
-  src: url('/aicoa/font/icomoon/icomoon.eot?1465788872') format('embedded-opentype'), url('/aicoa/font/icomoon/icomoon.woff?1465788872') format('woff'), url('/aicoa/font/icomoon/icomoon.ttf?1465788872') format('truetype'), url('/aicoa/font/icomoon/icomoon.svg?1465788872') format('svg');
+  src: url('/aicoa/font/icomoon/icomoon.eot?1468247080') format('embedded-opentype'), url('/aicoa/font/icomoon/icomoon.woff?1468247080') format('woff'), url('/aicoa/font/icomoon/icomoon.ttf?1468247080') format('truetype'), url('/aicoa/font/icomoon/icomoon.svg?1468247080') format('svg');
 }
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon', Monaco, "微軟正黑體", "Microsoft JhengHei";
@@ -240,64 +240,92 @@ html body {
     width: 100%;
   }
   html body .b .b01 .b011 .top {
-    display: none;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
     font-size: .9em;
     font-weight: bolder;
     border-top: 3px solid #64151b;
     border-bottom: 1px solid #bfbfbf;
-    *zoom: 1;
+    position: relative;
+    margin-bottom: 10px;
+    position: relative;
   }
-  html body .b .b01 .b011 .top:after {
-    display: table;
-    content: "";
-    line-height: 0;
-    clear: both;
+  html body .b .b01 .b011 .top:before {
+    content: "\e901";
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-family: "icomoon", "Roboto", "微軟正黑體", Monaco;
+  }
+  html body .b .b01 .b011 .top.show {
+    height: auto;
+  }
+  html body .b .b01 .b011 .top.show:before {
+    content: "\e900";
+    font-family: "icomoon", "Roboto", "微軟正黑體", Monaco;
+  }
+  html body .b .b01 .b011 .top.show > div {
+    position: relative;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    z-index: 1;
+  }
+  html body .b .b01 .b011 .top.show > div + div {
+    border-top: 1px solid #bfbfbf;
+  }
+  html body .b .b01 .b011 .top.show > div span {
+    cursor: pointer;
+  }
+  html body .b .b01 .b011 .top.show > div.sp {
+    height: auto;
+    z-index: 2;
+  }
+  html body .b .b01 .b011 .top.show > div.sp div {
+    display: inline-block;
+    width: 100%;
+  }
+  html body .b .b01 .b011 .top.show > div.sp div a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    color: #7e8e99;
+    border-top: 1px solid rgba(191, 191, 191, 0.5);
+    text-align: left;
+    text-decoration: none;
+  }
+  html body .b .b01 .b011 .top.show > div.sp div a:hover {
+    color: #28a4a0;
   }
   html body .b .b01 .b011 .top > div {
-    float: left;
-    width: calc(100% / 6);
-    position: relative;
-    border-right: 1px solid #bfbfbf;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 36px;
+    z-index: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
   }
-  html body .b .b01 .b011 .top > div:last-child {
-    border: 0;
+  html body .b .b01 .b011 .top > div.sp {
+    z-index: 2;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
   }
   html body .b .b01 .b011 .top > div span {
     display: inline-block;
     width: 100%;
-    color: #626060;
-    padding: 14px 0;
-  }
-  html body .b .b01 .b011 .top > div span.sp {
-    color: white;
-    background-color: #952a33;
+    height: 100%;
+    text-align: left;
+    padding-left: 5px;
+    line-height: 34px;
   }
   html body .b .b01 .b011 .top > div .list {
     display: none;
-  }
-  html body .b .b01 .b011 .top > div:hover span {
-    color: white;
-    background-color: #9d313c;
-  }
-  html body .b .b01 .b011 .top > div:hover .list {
-    display: inline-block;
-    width: 100%;
-    z-index: 22;
-    position: absolute;
-    left: 0;
-    top: 45px;
-  }
-  html body .b .b01 .b011 .top > div:hover .list > a {
-    display: inline-block;
-    width: 100%;
-    padding: 15px 0;
-    color: #7e8e99;
-    background-color: #eaeef2;
-    text-decoration: none;
-    border-top: 2px solid white;
-  }
-  html body .b .b01 .b011 .top > div:hover .list > a:hover {
-    color: #28a4a0;
   }
   html body .b .b01 .b011 .tag {
     width: 100%;
@@ -897,18 +925,21 @@ html body {
     position: relative;
     border-right: 1px solid #bfbfbf;
   }
+  html body .b .b01 .b011 .top > div.index {
+    display: none;
+  }
   html body .b .b01 .b011 .top > div:last-child {
     border: 0;
+  }
+  html body .b .b01 .b011 .top > div.sp span {
+    color: white;
+    background-color: #952a33;
   }
   html body .b .b01 .b011 .top > div span {
     display: inline-block;
     width: 100%;
     color: #626060;
     padding: 14px 0;
-  }
-  html body .b .b01 .b011 .top > div span.sp {
-    color: white;
-    background-color: #952a33;
   }
   html body .b .b01 .b011 .top > div .list {
     display: none;
