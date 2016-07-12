@@ -336,8 +336,8 @@ html body {
   }
   html body .b .b01 .b011 .cent > div {
     float: left;
-    width: 100%;
-    height: 275px;
+    width: calc(100% / 2 - 5px);
+    height: 255px;
     margin-bottom: 15px;
     overflow: hidden;
     -moz-border-radius: 3px;
@@ -345,9 +345,12 @@ html body {
     border-radius: 3px;
     background-color: #f9f9f9;
   }
+  html body .b .b01 .b011 .cent > div:nth-child(2n) {
+    margin-left: 10px;
+  }
   html body .b .b01 .b011 .cent > div .p01 {
     width: 100%;
-    height: 180px;
+    height: 120px;
   }
   html body .b .b01 .b011 .cent > div .p01 img {
     max-width: 100%;
@@ -429,9 +432,9 @@ html body {
     color: #a82a36;
   }
   html body .b .b01 .b011 .cx .x03 {
-    border-top: 1px solid #bba792;
-    border-bottom: 1px solid #bba792;
-    font-size: .9em;
+    border-top: 1px solid #6f1820;
+    border-bottom: 1px solid #6f1820;
+    font-size: .8em;
     font-weight: bolder;
     *zoom: 1;
   }
@@ -573,12 +576,12 @@ html body {
     border-bottom: 1px solid #bfbfbf;
   }
   html body .b .b01 .b012 > div .tag01.z {
-    border-top: 3px solid #feb116;
-    color: #feb116;
+    border-top: 3px solid #ed7d11;
+    color: #ed7d11;
   }
   html body .b .b01 .b012 > div .tag01.y {
-    border-top: 3px solid #53b6b4;
-    color: #53b6b4;
+    border-top: 3px solid #80b2e3;
+    color: #80b2e3;
   }
   html body .b .b01 .b012 > div .n01 {
     padding: 10px 0;
@@ -607,7 +610,6 @@ html body {
   }
   html body .b .b01 .b012 > div .n01 .n011 {
     font-size: 1.2em;
-    font-weight: bolder;
     color: #712b2f;
   }
   html body .b .b01 .b012 > div .n01 .n012 {
@@ -1069,8 +1071,8 @@ html body {
     color: #a82a36;
   }
   html body .b .b01 .b011 .cx .x03 {
-    border-top: 1px solid #bba792;
-    border-bottom: 1px solid #bba792;
+    border-top: 1px solid #6f1820;
+    border-bottom: 1px solid #6f1820;
     font-size: .9em;
     font-weight: bolder;
     *zoom: 1;
@@ -1102,7 +1104,7 @@ html body {
     display: inline-block;
     padding: 3px 0;
     margin: 0;
-    color: #714711;
+    color: #987313;
   }
   html body .b .b01 .b011 .cx .x03 .x033 {
     float: left;
@@ -1207,12 +1209,12 @@ html body {
     border-bottom: 1px solid #bfbfbf;
   }
   html body .b .b01 .b012 > div .tag01.z {
-    border-top: 3px solid #feb116;
-    color: #feb116;
+    border-top: 3px solid #ed7d11;
+    color: #ed7d11;
   }
   html body .b .b01 .b012 > div .tag01.y {
-    border-top: 3px solid #53b6b4;
-    color: #53b6b4;
+    border-top: 3px solid #80b2e3;
+    color: #80b2e3;
   }
   html body .b .b01 .b012 > div .n01 {
     padding: 10px 0;
@@ -1241,7 +1243,6 @@ html body {
   }
   html body .b .b01 .b012 > div .n01 .n011 {
     font-size: 1.2em;
-    font-weight: bolder;
     color: #712b2f;
   }
   html body .b .b01 .b012 > div .n01 .n012 {
