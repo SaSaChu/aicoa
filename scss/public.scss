@@ -242,7 +242,7 @@ html {
                     // background-color: rgba(0, 0, 255, 0.2);
                   }
                   div {
-                    
+
                     display: inline-block;
                     width: 100%;
                     // border: 1px solid rgba(255, 0, 0, .3);
@@ -264,7 +264,7 @@ html {
                 }
               }
             }
-            
+
             > div {
               position: absolute;
               top: 0;
@@ -352,9 +352,16 @@ html {
                 width: 100%;
                 height: 120px;
 
-                img {
-                  max-width: 100%;
-                  height: auto;
+                a {
+                  border: 0;
+                  cursor: pointer;
+
+                  img {
+                    max-width: 100%;
+                    height: auto;
+                  }
+
+                  &:hover {}
                 }
               }
 
@@ -1000,10 +1007,18 @@ html {
                 width: 100%;
                 height: 180px;
 
-                img {
-                  max-width: 100%;
-                  height: auto;
+                a {
+                  border: 0;
+                  cursor: pointer;
+
+                  img {
+                    max-width: 100%;
+                    height: auto;
+                  }
+
+                  &:hover {}
                 }
+
               }
 
               .date {
