@@ -16,4 +16,14 @@ $(function () {
     if ($(this).hasClass ('sp')) return $('#menu').removeClass ('show');
      $(this).addClass ('sp').siblings ().removeClass ('sp');
   });
+  $(window).scroll (function () {
+    var t = $(this).scrollTop ();
+    if (t > 10) $('#top').addClass ('show');
+    else $('#top').removeClass ('show');
+  });
+
+  $('#top').click (function () {
+    $('body').animate ({ scrollTop: 0 }, 'slow');
+  });
+
 });
