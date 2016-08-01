@@ -106,14 +106,14 @@ html {
           padding-top: 10px;
           @include clearfix();
 
-          
+
           .a0122 {
             float: right;
             width: 100%;
             height: 35px;
 
 
-            
+
             @include clearfix();
             > div:nth-child(1) {
               position: relative;
@@ -489,6 +489,17 @@ html {
               font-size: 1em;
               color: rgba(71, 71, 71, 1.00);
               line-height: 1.6em;
+
+              .x041 {
+                width: 100%;
+                height: 300px;
+                margin-bottom: 15px;
+
+                img {
+                  max-width: 400px;
+                  height: 100%;
+                }
+              }
             }
 
             .x05 {
@@ -792,14 +803,14 @@ html {
           padding-top: 10px;
           @include clearfix();
 
-          
+
           .a0122 {
             float: right;
             width: 100%;
             height: 35px;
 
 
-            
+
             @include clearfix();
             > div:nth-child(1) {
               position: relative;
@@ -1145,6 +1156,19 @@ html {
               font-size: 1em;
               color: rgba(71, 71, 71, 1.00);
               line-height: 2em;
+
+              .x041 {
+                width: 100%;
+                height: 300px;
+                margin-bottom: 15px;
+
+                img {
+                  max-width: 720px;
+                  height: 100%;
+                }
+              }
+
+
             }
 
             .x05 {

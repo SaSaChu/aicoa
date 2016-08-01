@@ -10,7 +10,7 @@ $(function(d, s, id) {
 
 $(function () {
 
-  $('.adpic, .p01, .x01').imgLiquid ({verticalAlign: 'center'});
+  $('.adpic, .p01, .x01, .x041').imgLiquid ({verticalAlign: 'center'});
 
   $('#menu > div').click (function () {
     if (!$('#menu').hasClass ('show')) return $('#menu').addClass ('show');
