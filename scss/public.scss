@@ -3,7 +3,7 @@
 @include font-face("Monaco", font-files("monaco/monaco.ttf", "monaco/monaco.otf"));
 @include font-face("icomoon", font-files("icomoon/icomoon.eot", "icomoon/icomoon.woff", "icomoon/icomoon.ttf", "icomoon/icomoon.svg"));
 [class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon', Monaco, "微軟正黑體", "Microsoft JhengHei";
+  font-family: 'icomoon', Monaco, "微軟正黑體", "Microsoft JhengHei" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -32,6 +32,7 @@
 
 * {
   &, &:after, &:before {
+    font-family: "Roboto", "微軟正黑體", Monaco !important;
     vertical-align: top;
     @include box-sizing(border-box);
     @include selection(rgba(150, 200, 255, 1), rgba(255, 255, 255, 1));
