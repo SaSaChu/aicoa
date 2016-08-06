@@ -541,6 +541,10 @@ html {
               font-size: 1em;
               color: rgba(71, 71, 71, 1.00);
               line-height: 1.6em;
+              img {
+                max-width: 100% !important;
+                height: auto !important;
+              }
 
               .x041 {
                 width: 100%;
