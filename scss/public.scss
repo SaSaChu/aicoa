@@ -1,19 +1,5 @@
 @import "_oa";
 
-@include font-face("Monaco", font-files("monaco/monaco.ttf", "monaco/monaco.otf"));
-@include font-face("icomoon", font-files("icomoon/icomoon.eot", "icomoon/icomoon.woff", "icomoon/icomoon.ttf", "icomoon/icomoon.svg"));
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon', Monaco, "微軟正黑體", "Microsoft JhengHei" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  @include font-smoothing(antialiased);
-}
-
 
 
 
@@ -31,13 +17,27 @@
 }
 
 * {
-  &, &:after, &:before {
     font-family: "Roboto", "微軟正黑體", Monaco !important;
+  &, &:after, &:before {
     vertical-align: top;
     @include box-sizing(border-box);
     @include selection(rgba(150, 200, 255, 1), rgba(255, 255, 255, 1));
     @include font-smoothing(antialiased);
   }
+}
+
+@include font-face("Monaco", font-files("monaco/monaco.ttf", "monaco/monaco.otf"));
+@include font-face("icomoon", font-files("icomoon/icomoon.eot", "icomoon/icomoon.woff", "icomoon/icomoon.ttf", "icomoon/icomoon.svg"));
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon', Monaco, "微軟正黑體", "Microsoft JhengHei" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  @include font-smoothing(antialiased);
 }
 
 html {
@@ -188,6 +188,57 @@ html {
         // @include split-left(75%, '.b011', '.b012');
         // 左邊
         .b011 {
+
+          // 數字頁數
+          .mblc {
+            width: 100%;
+            padding: 20px 0;
+
+            .nb {
+              width: 100%;
+
+              .cnb {
+                display: inline-block;
+
+                @include clearfix();
+
+                > a {
+                  display: inline-block;
+                  padding-top: 5px;
+                  margin-left: 0;
+                  width: 30px;
+                  height: 30px;
+
+                  @include border-radius(50px);
+
+                  background: rgba(202, 215, 222, 1.00);
+
+                  font-size: .8em;
+                  font-weight: bolder;
+                  color: white;
+                  text-align: center;
+                  text-decoration: none;
+
+                  &:hover, &.na {
+                   background: rgba(100, 173, 208, 1.00);
+                  }
+
+                  &.nb {
+                   width: auto;
+                   padding-left: 10px;
+                   padding-right: 10px;
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+
+
           width: 100%;
           // padding-right: 30px;
 
@@ -884,6 +935,53 @@ html {
         @include split-left(75%, '.b011', '.b012');
         // 左邊
         .b011 {
+
+          .mblc {
+            width: 100%;
+            padding: 20px 0;
+
+            .nb {
+              width: 100%;
+
+              .cnb {
+                display: inline-block;
+
+                @include clearfix();
+
+                > a {
+                  display: inline-block;
+                  padding-top: 5px;
+                  margin-left: 10px;
+                  width: 30px;
+                  height: 30px;
+
+                  @include border-radius(50px);
+
+                  background: rgba(202, 215, 222, 1.00);
+
+                  font-size: 1em;
+                  color: white;
+                  text-align: center;
+                  text-decoration: none;
+
+                  &:hover, &.na {
+                   background: rgba(100, 173, 208, 1.00);
+                  }
+
+                  &.nb {
+                   width: auto;
+                   padding-left: 10px;
+                   padding-right: 10px;
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
           padding-right: 30px;
 
           .top {
@@ -919,6 +1017,14 @@ html {
                 color: rgba(98, 96, 96, 1.00);
                 padding: 14px 0;
 
+                a {
+                  &:hover {
+                    color: white;
+                  }
+                }
+                &:hover {
+                  color: white;
+                }
               }
 
               .list {
@@ -928,6 +1034,9 @@ html {
               &:hover {
                 span {
                   color: white;
+                  a {
+                    color: white;
+                  }
                   background-color: rgba(157, 49, 60, 1.00);
                 }
 

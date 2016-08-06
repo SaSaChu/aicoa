@@ -43,6 +43,45 @@
  * @author      OA Wu <comdan66@gmail.com>
  * @copyright   Copyright (c) 2016 OA Wu Design
  */
+.icon-search:before {
+  content: "\f02e";
+}
+
+.icon-facebook-with-circle:before {
+  content: "\e902";
+}
+
+.icon-chevron-thin-up:before {
+  content: "\e900";
+}
+
+.icon-chevron-thin-down:before {
+  content: "\e901";
+}
+
+* {
+  font-family: "Roboto", "微軟正黑體", Monaco !important;
+}
+*, *:after, *:before {
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+*::-moz-selection, *:after::-moz-selection, *:before::-moz-selection {
+  color: white;
+  background-color: #96c8ff;
+}
+*::selection, *:after::selection, *:before::selection {
+  color: white;
+  background-color: #96c8ff;
+}
+
 @font-face {
   font-family: "Monaco";
   src: url('/aicoa/font/monaco/monaco.ttf?1457875218') format('truetype'), url('/aicoa/font/monaco/monaco.otf?1457875218') format('opentype');
@@ -64,43 +103,6 @@
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
-}
-
-.icon-search:before {
-  content: "\f02e";
-}
-
-.icon-facebook-with-circle:before {
-  content: "\e902";
-}
-
-.icon-chevron-thin-up:before {
-  content: "\e900";
-}
-
-.icon-chevron-thin-down:before {
-  content: "\e901";
-}
-
-*, *:after, *:before {
-  font-family: "Roboto", "微軟正黑體", Monaco !important;
-  vertical-align: top;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-osx-font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-}
-*::-moz-selection, *:after::-moz-selection, *:before::-moz-selection {
-  color: white;
-  background-color: #96c8ff;
-}
-*::selection, *:after::selection, *:before::selection {
-  color: white;
-  background-color: #96c8ff;
 }
 
 html {
@@ -269,6 +271,47 @@ html body {
   }
   html body .b .b01 .b011 {
     width: 100%;
+  }
+  html body .b .b01 .b011 .mblc {
+    width: 100%;
+    padding: 20px 0;
+  }
+  html body .b .b01 .b011 .mblc .nb {
+    width: 100%;
+  }
+  html body .b .b01 .b011 .mblc .nb .cnb {
+    display: inline-block;
+    *zoom: 1;
+  }
+  html body .b .b01 .b011 .mblc .nb .cnb:after {
+    display: table;
+    content: "";
+    line-height: 0;
+    clear: both;
+  }
+  html body .b .b01 .b011 .mblc .nb .cnb > a {
+    display: inline-block;
+    padding-top: 5px;
+    margin-left: 0;
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background: #cad7de;
+    font-size: .8em;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+  html body .b .b01 .b011 .mblc .nb .cnb > a:hover, html body .b .b01 .b011 .mblc .nb .cnb > a.na {
+    background: #64add0;
+  }
+  html body .b .b01 .b011 .mblc .nb .cnb > a.nb {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   html body .b .b01 .b011 .top {
     display: inline-block;
@@ -980,6 +1023,46 @@ html body {
   html body .b .b01 .b011 {
     padding-right: 30px;
   }
+  html body .b .b01 .b011 .mblc {
+    width: 100%;
+    padding: 20px 0;
+  }
+  html body .b .b01 .b011 .mblc .nb {
+    width: 100%;
+  }
+  html body .b .b01 .b011 .mblc .nb .cnb {
+    display: inline-block;
+    *zoom: 1;
+  }
+  html body .b .b01 .b011 .mblc .nb .cnb:after {
+    display: table;
+    content: "";
+    line-height: 0;
+    clear: both;
+  }
+  html body .b .b01 .b011 .mblc .nb .cnb > a {
+    display: inline-block;
+    padding-top: 5px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background: #cad7de;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+  html body .b .b01 .b011 .mblc .nb .cnb > a:hover, html body .b .b01 .b011 .mblc .nb .cnb > a.na {
+    background: #64add0;
+  }
+  html body .b .b01 .b011 .mblc .nb .cnb > a.nb {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   html body .b .b01 .b011 .top {
     font-size: .9em;
     font-weight: bolder;
@@ -1015,12 +1098,21 @@ html body {
     color: #626060;
     padding: 14px 0;
   }
+  html body .b .b01 .b011 .top > div span a:hover {
+    color: white;
+  }
+  html body .b .b01 .b011 .top > div span:hover {
+    color: white;
+  }
   html body .b .b01 .b011 .top > div .list {
     display: none;
   }
   html body .b .b01 .b011 .top > div:hover span {
     color: white;
     background-color: #9d313c;
+  }
+  html body .b .b01 .b011 .top > div:hover span a {
+    color: white;
   }
   html body .b .b01 .b011 .top > div:hover .list {
     display: inline-block;
